@@ -1,0 +1,64 @@
+<div>
+    <table id="table" class=" table table-striped">
+        <thead class="header">
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Password</th>
+            <th>Actions</th>
+        </thead>
+        <tbody class="body">
+            <tr *ngFor="let item of MembersList">
+                <td>{{item.id}}</td>
+                <td>{{item.firstName}}</td>
+                <td>{{item.lastName}}</td>
+                <td>{{item.phoneNumber}}</td>
+                <td>{{item.password}}</td>
+                <td>
+                    <button
+                    class="btn btn-outline-warning" 
+                    (click)="editMember(item)">
+                    <i class="bi bi-pen-fill"></i>
+                    </button>
+                    <button 
+                    class="btn btn-outline-danger"
+                    (click)="delMember(item.id)">
+                    <i class="bi bi-trash-fill"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <table id="table" class=" table table-striped">
+        <thead class="header">
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone Number</th>
+            <th>Members Id</th>
+        </thead>
+        <tbody class="body">
+            <tr *ngFor="let item of ContactsList">
+                <td>{{item.id}}</td>
+                <td>{{item.firstName}}</td>
+                <td>{{item.lastName}}</td>
+                <td>{{item.phoneNumber}}</td>
+                <td>
+                    <button
+                    class="btn btn-outline-warning" 
+                    (click)="editMember(item)">
+                    <i class="bi bi-pen-fill"></i>
+                    </button>
+                    <button 
+                    class="btn btn-outline-danger"
+                    (click)="delMember(item.id)">
+                    <i class="bi bi-trash-fill"></i>
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
